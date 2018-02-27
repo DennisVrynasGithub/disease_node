@@ -18,7 +18,7 @@ app.use(connection(mysql, {
 }, 'request'));
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({ origin: 'http://83.212.101.67:4200' }));
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 app.use(express.static(__dirname + '/client/dist1')); // Provide static directory for frontend

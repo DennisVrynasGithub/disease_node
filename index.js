@@ -14,7 +14,7 @@ app.use(connection(mysql, {
     host: "localhost",
     user: "root",
     password: "",
-    database: "symptomsdisease"
+    database: "diseasesymptom"
 }, 'request'));
 
 // Middleware
@@ -25,7 +25,7 @@ app.use(express.static(__dirname + '/client/dist1')); // Provide static director
 app.use("/index",index);
 
 // Provide static directory for frontend
-app.use(express.static(__dirname + '/client/dist1')); // Provide static directory for frontend
+app.use(express.static(__dirname + '/client/dist1')); // Provide static directory for frontend   dist1
 app.use("/index",index);
 
 // Connect server to Angular 2 Index.html
@@ -35,7 +35,7 @@ app.use('*', function(req, res) {
 
 // Start Server: Listen on port 8080
 app.listen(8010, function() {
-    console.log('Listening on port 8080');
+    console.log('Listening on port 8010');
 });
 
 module.exports = app;

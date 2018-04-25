@@ -478,6 +478,198 @@ router.post('/quest6', function (req, res, next) {
     }
 });
 
+/* Get how many quest for each quest. */
+router.get('/getNumberofFirstQuest', function (req, res, next) {
+    try {
+        var reqObj = req.query;
+        req.getConnection(function (err, conn) {
+            if (err) {
+                console.error('SQL Connection error: ', err);
+                return next(err);
+            }
+            else {
+                var insertSql = "SELECT COUNT(*) AS `count` FROM questionnaire1 WHERE `id_2`= ? ";
+                var naming = reqObj.id_2;
+                conn.query(insertSql, [naming], function (err, rows, fields) {
+                    if (err) {
+                        console.error('SQL error: ', err);
+                        return next(err);
+                    }
+                    var resEmp = [];
+                    for (var empIndex in rows) {
+                        var empObj = rows[empIndex];
+                        resEmp.push(empObj);
+                    }
+                    res.json(resEmp);
+                });
+            }
+        });
+    }
+    catch (ex) {
+        console.error("Internal error:" + ex);
+        return next(ex);
+    }
+});
+/* Get how many quest for each quest. */
+router.get('/getNumberofSecondQuest', function (req, res, next) {
+    try {
+        var reqObj = req.query;
+        req.getConnection(function (err, conn) {
+            if (err) {
+                console.error('SQL Connection error: ', err);
+                return next(err);
+            }
+            else {
+                var insertSql = "SELECT COUNT(*) AS `count` FROM questionnaire2 WHERE `id_2`= ? ";
+                var naming = reqObj.id_2;
+                conn.query(insertSql, [naming], function (err, rows, fields) {
+                    if (err) {
+                        console.error('SQL error: ', err);
+                        return next(err);
+                    }
+                    var resEmp = [];
+                    for (var empIndex in rows) {
+                        var empObj = rows[empIndex];
+                        resEmp.push(empObj);
+                    }
+                    res.json(resEmp);
+                });
+            }
+        });
+    }
+    catch (ex) {
+        console.error("Internal error:" + ex);
+        return next(ex);
+    }
+});
+/* Get how many quest for each quest. */
+router.get('/getNumberofThreeQuest', function (req, res, next) {
+    try {
+        var reqObj = req.query;
+        req.getConnection(function (err, conn) {
+            if (err) {
+                console.error('SQL Connection error: ', err);
+                return next(err);
+            }
+            else {
+                var insertSql = "SELECT COUNT(*) AS `count` FROM questionnaire3 WHERE `id_2`= ? ";
+                var naming = reqObj.id_2;
+                conn.query(insertSql, [naming], function (err, rows, fields) {
+                    if (err) {
+                        console.error('SQL error: ', err);
+                        return next(err);
+                    }
+                    var resEmp = [];
+                    for (var empIndex in rows) {
+                        var empObj = rows[empIndex];
+                        resEmp.push(empObj);
+                    }
+                    res.json(resEmp);
+                });
+            }
+        });
+    }
+    catch (ex) {
+        console.error("Internal error:" + ex);
+        return next(ex);
+    }
+});
+/* Get how many quest for each quest. */
+router.get('/getNumberofFourthQuest', function (req, res, next) {
+    try {
+        var reqObj = req.query;
+        req.getConnection(function (err, conn) {
+            if (err) {
+                console.error('SQL Connection error: ', err);
+                return next(err);
+            }
+            else {
+                var insertSql = "SELECT COUNT(*) AS `count` FROM questionnaire4 WHERE `id_2`= ? ";
+                var naming = reqObj.id_2;
+                conn.query(insertSql, [naming], function (err, rows, fields) {
+                    if (err) {
+                        console.error('SQL error: ', err);
+                        return next(err);
+                    }
+                    var resEmp = [];
+                    for (var empIndex in rows) {
+                        var empObj = rows[empIndex];
+                        resEmp.push(empObj);
+                    }
+                    res.json(resEmp);
+                });
+            }
+        });
+    }
+    catch (ex) {
+        console.error("Internal error:" + ex);
+        return next(ex);
+    }
+});
+/* Get how many quest for each quest. */
+router.get('/getNumberofFifthQuest', function (req, res, next) {
+    try {
+        var reqObj = req.query;
+        req.getConnection(function (err, conn) {
+            if (err) {
+                console.error('SQL Connection error: ', err);
+                return next(err);
+            }
+            else {
+                var insertSql = "SELECT COUNT(*) AS `count` FROM questionnaire5 WHERE `id_2`= ? ";
+                var naming = reqObj.id_2;
+                conn.query(insertSql, [naming], function (err, rows, fields) {
+                    if (err) {
+                        console.error('SQL error: ', err);
+                        return next(err);
+                    }
+                    var resEmp = [];
+                    for (var empIndex in rows) {
+                        var empObj = rows[empIndex];
+                        resEmp.push(empObj);
+                    }
+                    res.json(resEmp);
+                });
+            }
+        });
+    }
+    catch (ex) {
+        console.error("Internal error:" + ex);
+        return next(ex);
+    }
+});
+/* Get how many quest for each quest. */
+router.get('/getNumberofSixthQuest', function (req, res, next) {
+    try {
+        var reqObj = req.query;
+        req.getConnection(function (err, conn) {
+            if (err) {
+                console.error('SQL Connection error: ', err);
+                return next(err);
+            }
+            else {
+                var insertSql = "SELECT COUNT(*) AS `count` FROM questionnaire6 WHERE `id_2`= ? ";
+                var naming = reqObj.id_2;
+                conn.query(insertSql, [naming], function (err, rows, fields) {
+                    if (err) {
+                        console.error('SQL error: ', err);
+                        return next(err);
+                    }
+                    var resEmp = [];
+                    for (var empIndex in rows) {
+                        var empObj = rows[empIndex];
+                        resEmp.push(empObj);
+                    }
+                    res.json(resEmp);
+                });
+            }
+        });
+    }
+    catch (ex) {
+        console.error("Internal error:" + ex);
+        return next(ex);
+    }
+});
 /* Get one disease. */
 router.get('/getDisease', function (req, res, next) {
     try {
